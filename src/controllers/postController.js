@@ -11,13 +11,14 @@ export const getPosts = async (req, res) => {
 
 export const createPost = async (req, res) => {
     try {
-        const { title, description, lat, lng, imageUrl } = req.body;
+        const { title, description, latitude, longitude } = req.body;
+        const imageUrl = req.file ? req.file.path : null;
 
         const post = await Post.create({
             title,
             description,
-            lat,
-            lng,
+            lat: parseFloat(latitude),
+            lng: parseFloat(longitude),
             imageUrl,
         });
 
