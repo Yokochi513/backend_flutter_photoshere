@@ -7,6 +7,7 @@ const upload = multer({ dest: 'uploads/' });
 
 
 router.get('/posts', getPosts);
+
 router.post('/posts', upload.single('image'), createPost);
 
 export default router;

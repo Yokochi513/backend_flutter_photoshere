@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import app from './app.js';
 
-dotenv.config({ path: path.resolve('../.env') });
+dotenv.config({ path: path.join(process.cwd(), '.env') });
 
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
