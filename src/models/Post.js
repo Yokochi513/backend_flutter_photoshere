@@ -6,7 +6,7 @@ const postSchema = new mongoose.Schema(
         description: String,
         lat: Number,
         lng: Number,
-        imageUrl: String,
+        imageUrls: [String],
     },
     { timestamps: true }
 );
