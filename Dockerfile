@@ -11,6 +11,9 @@ RUN npm ci
 # ソースコードコピー
 COPY . .
 
+# ディレクトリ作成
+RUN mkdir -p uploads
+
 # 開発用ポート
 EXPOSE 3000
 
